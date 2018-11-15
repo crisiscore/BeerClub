@@ -15,6 +15,9 @@
 		CC5ED4CD2199DB2300079EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5ED4CB2199DB2300079EE6 /* Main.storyboard */; };
 		CC5ED4CF2199DB2500079EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5ED4CE2199DB2500079EE6 /* Assets.xcassets */; };
 		CC5ED4D22199DB2500079EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5ED4D02199DB2500079EE6 /* LaunchScreen.storyboard */; };
+		CC634167219DDC130054B67A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC634166219DDC130054B67A /* CardView.swift */; };
+		CC634169219DE0C20054B67A /* BeerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC634168219DE0C20054B67A /* BeerVO.swift */; };
+		CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC63416A219DE22B0054B67A /* IngredientVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		CC5ED4CE2199DB2500079EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5ED4D12199DB2500079EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5ED4D32199DB2500079EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC634166219DDC130054B67A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CC634168219DE0C20054B67A /* BeerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVO.swift; sourceTree = "<group>"; };
+		CC63416A219DE22B0054B67A /* IngredientVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientVO.swift; sourceTree = "<group>"; };
 		DB0DF92044E9776063B0FA00 /* Pods_BeerClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,9 @@
 				CC5ED4D32199DB2500079EE6 /* Info.plist */,
 				CC4B03792199EC870089C639 /* BeerCollectionViewCell.swift */,
 				CC4B037A2199EC870089C639 /* BeerCollectionViewCell.xib */,
+				CC634166219DDC130054B67A /* CardView.swift */,
+				CC634168219DE0C20054B67A /* BeerVO.swift */,
+				CC63416A219DE22B0054B67A /* IngredientVO.swift */,
 			);
 			path = BeerClub;
 			sourceTree = "<group>";
@@ -220,7 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5ED4CA2199DB2300079EE6 /* ViewController.swift in Sources */,
+				CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */,
 				CC5ED4C82199DB2300079EE6 /* AppDelegate.swift in Sources */,
+				CC634167219DDC130054B67A /* CardView.swift in Sources */,
+				CC634169219DE0C20054B67A /* BeerVO.swift in Sources */,
 				CC4B037B2199EC870089C639 /* BeerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
