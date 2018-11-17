@@ -63,7 +63,6 @@ class ViewController: UIViewController {
             break
                 
             }
-            
         }
     }
 
@@ -71,6 +70,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : UICollectionViewDataSource {
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return beerList.count
     }
@@ -104,7 +104,7 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
      
-        let w = self.view.frame.width / 2 - 20
+        let w = self.view.frame.width / 2 - 16
         
         return CGSize(width: w, height: w * 1.5)
     }

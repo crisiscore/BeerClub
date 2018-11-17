@@ -14,11 +14,13 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var tvName: UILabel!
     
-    @IBOutlet weak var tvDate: UILabel!
+    @IBOutlet weak var tvTag: UILabel!
     
     @IBOutlet weak var tvDescription: UILabel!
     
-    @IBOutlet weak var tvBewareTips: UILabel!
+    @IBOutlet weak var tvBrewerTips: UILabel!
+    
+    @IBOutlet weak var tvFoodParing: UILabel!
     
     @IBOutlet weak var tvContributedBy: UILabel!
     
@@ -29,15 +31,15 @@ class DetailsViewController: UIViewController {
 
         ivBeer.sd_setImage(with: URL(string: mBeer.image_url!), placeholderImage: UIImage(named: "beer"))
         
-        tvName.text = mBeer.name
-        tvDate.text = mBeer.first_brewed
-        tvDescription.text = mBeer.description
-        tvBewareTips.text = mBeer.brewers_tips
+       tvName.text = mBeer.name
+       tvTag.text = mBeer.tagline
+       tvDescription.text = mBeer.description
+      tvBrewerTips.text = mBeer.brewers_tips
+        tvFoodParing.text = mBeer.food_pairing?[0]
         tvContributedBy.text = mBeer.contributed_by
         
     }
     
-
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -19,6 +19,8 @@
 		CC634167219DDC130054B67A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC634166219DDC130054B67A /* CardView.swift */; };
 		CC634169219DE0C20054B67A /* BeerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC634168219DE0C20054B67A /* BeerVO.swift */; };
 		CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC63416A219DE22B0054B67A /* IngredientVO.swift */; };
+		CCCC1ABD21A04C2900F8D86D /* MaltVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC1ABC21A04C2900F8D86D /* MaltVO.swift */; };
+		CCCC1ABF21A04C3700F8D86D /* HopsVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC1ABE21A04C3700F8D86D /* HopsVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		CC634166219DDC130054B67A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CC634168219DE0C20054B67A /* BeerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVO.swift; sourceTree = "<group>"; };
 		CC63416A219DE22B0054B67A /* IngredientVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientVO.swift; sourceTree = "<group>"; };
+		CCCC1ABC21A04C2900F8D86D /* MaltVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaltVO.swift; sourceTree = "<group>"; };
+		CCCC1ABE21A04C3700F8D86D /* HopsVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopsVO.swift; sourceTree = "<group>"; };
 		DB0DF92044E9776063B0FA00 /* Pods_BeerClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				CC634168219DE0C20054B67A /* BeerVO.swift */,
 				CC63416A219DE22B0054B67A /* IngredientVO.swift */,
 				CC43AA08219F293200354460 /* DetailsViewController.swift */,
+				CCCC1ABC21A04C2900F8D86D /* MaltVO.swift */,
+				CCCC1ABE21A04C3700F8D86D /* HopsVO.swift */,
 			);
 			path = BeerClub;
 			sourceTree = "<group>";
@@ -231,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCC1ABF21A04C3700F8D86D /* HopsVO.swift in Sources */,
 				CC5ED4CA2199DB2300079EE6 /* ViewController.swift in Sources */,
 				CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */,
+				CCCC1ABD21A04C2900F8D86D /* MaltVO.swift in Sources */,
 				CC5ED4C82199DB2300079EE6 /* AppDelegate.swift in Sources */,
 				CC634167219DDC130054B67A /* CardView.swift in Sources */,
 				CC43AA09219F293200354460 /* DetailsViewController.swift in Sources */,

@@ -20,22 +20,22 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzk-3d-Lpk" customClass="CardView" customModule="BeerClub" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="159" height="249"/>
+                        <rect key="frame" x="8" y="8" width="143" height="233"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beer" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-GC-qHq">
-                                <rect key="frame" x="8" y="8" width="143" height="143"/>
+                                <rect key="frame" x="8" y="8" width="127" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LTM-GC-qHq" secondAttribute="height" multiplier="1:1" id="tks-JW-mlq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punk IPA 2007 - 2010" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyh-xP-qrv">
-                                <rect key="frame" x="16" y="167" width="127" height="35.5"/>
+                                <rect key="frame" x="16" y="151" width="111" height="35.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="04/2007" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-9J-N6p">
-                                <rect key="frame" x="16" y="218.5" width="127" height="14.5"/>
+                                <rect key="frame" x="16" y="202.5" width="111" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,14 +55,28 @@
                             <constraint firstAttribute="trailing" secondItem="dPK-9J-N6p" secondAttribute="trailing" constant="16" id="kAN-M8-8R9"/>
                             <constraint firstItem="dPK-9J-N6p" firstAttribute="leading" secondItem="rzk-3d-Lpk" secondAttribute="leading" constant="16" id="tSo-1M-TKx"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="rzk-3d-Lpk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="130-08-QFT"/>
-                <constraint firstAttribute="trailing" secondItem="rzk-3d-Lpk" secondAttribute="trailing" id="9ps-ZO-bbU"/>
-                <constraint firstAttribute="bottom" secondItem="rzk-3d-Lpk" secondAttribute="bottom" id="M1u-jC-sPM"/>
-                <constraint firstItem="rzk-3d-Lpk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xEX-L5-iGK"/>
+                <constraint firstItem="rzk-3d-Lpk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="130-08-QFT"/>
+                <constraint firstAttribute="trailing" secondItem="rzk-3d-Lpk" secondAttribute="trailing" constant="8" id="9ps-ZO-bbU"/>
+                <constraint firstAttribute="bottom" secondItem="rzk-3d-Lpk" secondAttribute="bottom" constant="8" id="M1u-jC-sPM"/>
+                <constraint firstItem="rzk-3d-Lpk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="xEX-L5-iGK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="159" height="249"/>
