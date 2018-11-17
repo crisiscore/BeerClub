@@ -90,6 +90,18 @@ extension ViewController : UICollectionViewDataSource {
 
 extension ViewController : UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let nav = self.storyboard?.instantiateViewController(withIdentifier : "DetailsViewController") as! UINavigationController
+        
+        let vc = nav.viewControllers[0] as! DetailsViewController
+        
+        vc.mBeer = beerList[indexPath.row]
+        
+        self.present( nav  , animated: true , completion: nil)
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
      
         let w = self.view.frame.width / 2 - 20

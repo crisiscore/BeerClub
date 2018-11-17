@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4485AB843738FE4AF2D18EEC /* Pods_BeerClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0DF92044E9776063B0FA00 /* Pods_BeerClub.framework */; };
+		CC43AA09219F293200354460 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43AA08219F293200354460 /* DetailsViewController.swift */; };
 		CC4B037B2199EC870089C639 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B03792199EC870089C639 /* BeerCollectionViewCell.swift */; };
 		CC4B037C2199EC870089C639 /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4B037A2199EC870089C639 /* BeerCollectionViewCell.xib */; };
 		CC5ED4C82199DB2300079EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5ED4C72199DB2300079EE6 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		72B548950C4598DD349563A8 /* Pods-BeerClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerClub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeerClub/Pods-BeerClub.debug.xcconfig"; sourceTree = "<group>"; };
 		739A3993F8F7DA09F7D5BD64 /* Pods-BeerClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerClub.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeerClub/Pods-BeerClub.release.xcconfig"; sourceTree = "<group>"; };
+		CC43AA08219F293200354460 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CC4B03792199EC870089C639 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC4B037A2199EC870089C639 /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
 		CC5ED4C42199DB2300079EE6 /* BeerClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				CC634166219DDC130054B67A /* CardView.swift */,
 				CC634168219DE0C20054B67A /* BeerVO.swift */,
 				CC63416A219DE22B0054B67A /* IngredientVO.swift */,
+				CC43AA08219F293200354460 /* DetailsViewController.swift */,
 			);
 			path = BeerClub;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */,
 				CC5ED4C82199DB2300079EE6 /* AppDelegate.swift in Sources */,
 				CC634167219DDC130054B67A /* CardView.swift in Sources */,
+				CC43AA09219F293200354460 /* DetailsViewController.swift in Sources */,
 				CC634169219DE0C20054B67A /* BeerVO.swift in Sources */,
 				CC4B037B2199EC870089C639 /* BeerCollectionViewCell.swift in Sources */,
 			);
