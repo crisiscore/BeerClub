@@ -34,8 +34,8 @@ class DetailsViewController: UIViewController {
        tvName.text = mBeer.name
        tvTag.text = mBeer.tagline
        tvDescription.text = mBeer.description
-      tvBrewerTips.text = mBeer.brewers_tips
-        tvFoodParing.text = mBeer.food_pairing?[0]
+       tvBrewerTips.text = mBeer.brewers_tips
+        tvFoodParing.text = mBeer.food_pairing?.joined(separator: "\n")
         tvContributedBy.text = mBeer.contributed_by
         
     }
