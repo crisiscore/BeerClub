@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4485AB843738FE4AF2D18EEC /* Pods_BeerClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0DF92044E9776063B0FA00 /* Pods_BeerClub.framework */; };
+		CC08FE9A21A6FED6003612D6 /* BeerDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC08FE9821A6FED6003612D6 /* BeerDB.xcdatamodeld */; };
 		CC43AA09219F293200354460 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43AA08219F293200354460 /* DetailsViewController.swift */; };
 		CC4B037B2199EC870089C639 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B03792199EC870089C639 /* BeerCollectionViewCell.swift */; };
 		CC4B037C2199EC870089C639 /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4B037A2199EC870089C639 /* BeerCollectionViewCell.xib */; };
@@ -19,6 +20,7 @@
 		CC634167219DDC130054B67A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC634166219DDC130054B67A /* CardView.swift */; };
 		CC634169219DE0C20054B67A /* BeerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC634168219DE0C20054B67A /* BeerVO.swift */; };
 		CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC63416A219DE22B0054B67A /* IngredientVO.swift */; };
+		CC6A2BE121A157C400066120 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A2BE021A157C400066120 /* ZoomViewController.swift */; };
 		CCCC1ABD21A04C2900F8D86D /* MaltVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC1ABC21A04C2900F8D86D /* MaltVO.swift */; };
 		CCCC1ABF21A04C3700F8D86D /* HopsVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC1ABE21A04C3700F8D86D /* HopsVO.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,7 @@
 /* Begin PBXFileReference section */
 		72B548950C4598DD349563A8 /* Pods-BeerClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerClub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeerClub/Pods-BeerClub.debug.xcconfig"; sourceTree = "<group>"; };
 		739A3993F8F7DA09F7D5BD64 /* Pods-BeerClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerClub.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeerClub/Pods-BeerClub.release.xcconfig"; sourceTree = "<group>"; };
+		CC08FE9921A6FED6003612D6 /* BeerDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeerDB.xcdatamodel; sourceTree = "<group>"; };
 		CC43AA08219F293200354460 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CC4B03792199EC870089C639 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC4B037A2199EC870089C639 /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		CC634166219DDC130054B67A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CC634168219DE0C20054B67A /* BeerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVO.swift; sourceTree = "<group>"; };
 		CC63416A219DE22B0054B67A /* IngredientVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientVO.swift; sourceTree = "<group>"; };
+		CC6A2BE021A157C400066120 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 		CCCC1ABC21A04C2900F8D86D /* MaltVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaltVO.swift; sourceTree = "<group>"; };
 		CCCC1ABE21A04C3700F8D86D /* HopsVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopsVO.swift; sourceTree = "<group>"; };
 		DB0DF92044E9776063B0FA00 /* Pods_BeerClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				CC43AA08219F293200354460 /* DetailsViewController.swift */,
 				CCCC1ABC21A04C2900F8D86D /* MaltVO.swift */,
 				CCCC1ABE21A04C3700F8D86D /* HopsVO.swift */,
+				CC6A2BE021A157C400066120 /* ZoomViewController.swift */,
+				CC08FE9821A6FED6003612D6 /* BeerDB.xcdatamodeld */,
 			);
 			path = BeerClub;
 			sourceTree = "<group>";
@@ -238,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCCC1ABF21A04C3700F8D86D /* HopsVO.swift in Sources */,
+				CC6A2BE121A157C400066120 /* ZoomViewController.swift in Sources */,
+				CC08FE9A21A6FED6003612D6 /* BeerDB.xcdatamodeld in Sources */,
 				CC5ED4CA2199DB2300079EE6 /* ViewController.swift in Sources */,
 				CC63416B219DE22B0054B67A /* IngredientVO.swift in Sources */,
 				CCCC1ABD21A04C2900F8D86D /* MaltVO.swift in Sources */,
@@ -445,6 +453,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC08FE9821A6FED6003612D6 /* BeerDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC08FE9921A6FED6003612D6 /* BeerDB.xcdatamodel */,
+			);
+			currentVersion = CC08FE9921A6FED6003612D6 /* BeerDB.xcdatamodel */;
+			path = BeerDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC5ED4BC2199DB2300079EE6 /* Project object */;
 }

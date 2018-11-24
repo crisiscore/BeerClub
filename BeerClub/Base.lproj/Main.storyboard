@@ -180,6 +180,11 @@
                                 <action selector="back:" destination="rtA-z1-Kz4" id="Jqe-cr-qaO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Zoom" id="EZj-Dt-21C">
+                            <connections>
+                                <action selector="tapZoom:" destination="rtA-z1-Kz4" id="AVe-ch-fjO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
@@ -231,6 +236,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSO-9H-W4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="698"/>
+        </scene>
+        <!--Zoom View Controller-->
+        <scene sceneID="Ojo-CG-4ca">
+            <objects>
+                <viewController id="bAM-pJ-5Sh" customClass="ZoomViewController" customModule="BeerClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3DR-gL-UfL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru0-P6-2r6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beer" translatesAutoresizingMaskIntoConstraints="NO" id="Rms-4U-9P5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Rms-4U-9P5" firstAttribute="top" secondItem="Ru0-P6-2r6" secondAttribute="top" id="I5d-oU-I18"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rms-4U-9P5" secondAttribute="trailing" id="bpc-Qj-7Qh"/>
+                                    <constraint firstItem="Rms-4U-9P5" firstAttribute="centerX" secondItem="Ru0-P6-2r6" secondAttribute="centerX" id="coN-XB-JvY"/>
+                                    <constraint firstItem="Rms-4U-9P5" firstAttribute="centerY" secondItem="Ru0-P6-2r6" secondAttribute="centerY" id="gLZ-Oq-mQM"/>
+                                    <constraint firstItem="Rms-4U-9P5" firstAttribute="leading" secondItem="Ru0-P6-2r6" secondAttribute="leading" id="h0O-Nl-FLc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rms-4U-9P5" secondAttribute="bottom" id="iiI-7J-z1A"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ru0-P6-2r6" firstAttribute="top" secondItem="MUY-n7-O5Z" secondAttribute="top" id="0SF-xQ-Qxb"/>
+                            <constraint firstItem="Ru0-P6-2r6" firstAttribute="leading" secondItem="MUY-n7-O5Z" secondAttribute="leading" id="8bF-8h-hIa"/>
+                            <constraint firstAttribute="trailing" secondItem="Ru0-P6-2r6" secondAttribute="trailing" id="DIm-Pc-D7r"/>
+                            <constraint firstItem="MUY-n7-O5Z" firstAttribute="bottom" secondItem="Ru0-P6-2r6" secondAttribute="bottom" id="WWC-7R-4ZF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MUY-n7-O5Z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p3o-IG-Log">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="vzp-1t-4zV">
+                            <connections>
+                                <action selector="back:" destination="bAM-pJ-5Sh" id="Zq8-Bv-Ii0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ivBeer" destination="Rms-4U-9P5" id="Pbn-GQ-otK"/>
+                        <outlet property="scrollView" destination="Ru0-P6-2r6" id="jil-CQ-zr7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSL-sj-Rjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3220" y="743.47826086956525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4SG-Hl-Kp9">
+            <objects>
+                <navigationController storyboardIdentifier="ZoomViewController" automaticallyAdjustsScrollViewInsets="NO" id="DIP-Hl-7RU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d6w-iz-Arn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bAM-pJ-5Sh" kind="relationship" relationship="rootViewController" id="VxU-wg-yN2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vk-hm-fFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280.8000000000002" y="743.47826086956525"/>
         </scene>
     </scenes>
     <resources>

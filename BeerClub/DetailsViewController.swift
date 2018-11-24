@@ -24,24 +24,35 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var tvContributedBy: UILabel!
     
-    var mBeer : BeerVO = BeerVO()
+   // var mBeer : BeerVO = BeerVO()
+    
+    var mBeer : Beers?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ivBeer.sd_setImage(with: URL(string: mBeer.image_url!), placeholderImage: UIImage(named: "beer"))
+        ivBeer.sd_setImage(with: URL(string: mBeer!.image_url!), placeholderImage: UIImage(named: "beer"))
         
-       tvName.text = mBeer.name
-       tvTag.text = mBeer.tagline
-       tvDescription.text = mBeer.description
-       tvBrewerTips.text = mBeer.brewers_tips
-        tvFoodParing.text = mBeer.food_pairing?.joined(separator: "\n")
-        tvContributedBy.text = mBeer.contributed_by
+       tvName.text = mBeer!.name
+       tvTag.text = mBeer!.tagLine
+       tvDescription.text = mBeer!.description
+       tvBrewerTips.text = mBeer!.brewers_tips
+      //  tvFoodParing.text = mBeer!.food_pairing?.joined(separator: "\n")
+        tvContributedBy.text = mBeer!.contributed_by
         
     }
-    
+   
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func tapZoom(_ sender: UIBarButtonItem) {
+        let nav = self.storyboard?.instantiateViewController(withIdentifier: "ZoomViewController") as! UINavigationController
+        
+        let vc = nav.viewControllers[0] as! ZoomViewController
+        
+        vc.url = mBeer!.image_url
+        
+        self.present( nav  , animated: true , completion: nil)
+    }
 }

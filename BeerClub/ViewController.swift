@@ -9,13 +9,18 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import CoreData
 import SDWebImage
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var beerCollectionView: UICollectionView!
     
+    var managedObjectContext: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var beerList : [BeerVO] = []
+    
+    var beerNSList : [Beers] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,51 @@ class ViewController: UIViewController {
         
         loadBeers()
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getBeers()
+    }
+    
+    func getBeers() {
+        do{
+            beerNSList = try managedObjectContext.fetch(Beers.fetchRequest())
+            self.beerCollectionView.reloadData()
+        }catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func addBeers()  {
+        
+        beerList.forEach { (beerVO) in
+            
+            let entity = NSEntityDescription.entity(forEntityName: "Beers", in: managedObjectContext)
+            
+            let beer = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
+            
+            beer.setValue( beerVO.id, forKey: "id")
+            beer.setValue(beerVO.abv, forKey: "abv")
+            beer.setValue(beerVO.brewers_tips, forKey: "brewers_tips")
+            beer.setValue(beerVO.contributed_by, forKey: "contributed_by")
+           // beer.setValue(beerVO.description, forKey: "description")
+            beer.setValue(beerVO.first_brewed, forKey: "first_brewed")
+          //  beer.setValue(beerVO.food_pairing, forKey: "food_pairing")
+            beer.setValue(beerVO.image_url, forKey: "image_url")
+          //  beer.setValue(beerVO.ingredients, forKey: "ingredients")
+            beer.setValue(beerVO.name, forKey: "name")
+            
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print("Failed saving")
+            }
+            
+        }
+        
+        self.beerCollectionView.reloadData()
+
     }
     
     func loadBeers()  {
@@ -53,7 +103,9 @@ class ViewController: UIViewController {
                     })
                     
                     self.beerList = beerList
-                    self.beerCollectionView.reloadData()
+                    
+                    self.addBeers()
+                    
                 }
                 
                 break
@@ -72,13 +124,15 @@ class ViewController: UIViewController {
 extension ViewController : UICollectionViewDataSource {
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return beerList.count
+        return beerNSList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeerCollectionViewCell", for: indexPath) as! BeerCollectionViewCell
         
-        let beer  = beerList[indexPath.row]
+     //   let beer  = beerList[indexPath.row]
+        let beer  = beerNSList[indexPath.row]
+        
         cell.tvBeerName.text = beer.name
         cell.ivBeerImage.sd_setImage(with: URL(string: beer.image_url!), placeholderImage: UIImage(named: "beer"))
         
@@ -96,7 +150,7 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDelegateFl
         
         let vc = nav.viewControllers[0] as! DetailsViewController
         
-        vc.mBeer = beerList[indexPath.row]
+        vc.mBeer = beerNSList[indexPath.row]
         
         self.present( nav  , animated: true , completion: nil)
         
